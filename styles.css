@@ -515,3 +515,8 @@ a.article:hover .lire { color: var(--jaune-fonce); }
 @media (max-width: 860px) {
   .calendly-inline-widget { height: 1000px; }
 }
+
+/* Article illustré par un visuel carré */
+
+.lecture-image-carree { aspect-ratio: 1; width: 100%; height: auto; max-width: 560px; margin-inline: auto; display: block; box-shadow: 0 30px 60px -36px rgba(28, 36, 31, .45); }
+.article img.vignette-carree { object-position: center 18%; }
