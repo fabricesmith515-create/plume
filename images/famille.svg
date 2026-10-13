@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Album de photos de famille">
+  <rect width="400" height="260" fill="#f4a71d"/>
+  <rect x="52" y="40" width="296" height="190" rx="10" fill="#24452f"/>
+  <rect x="70" y="58" width="122" height="96" rx="4" fill="#fff" transform="rotate(-5 131 106)"/>
+  <rect x="80" y="68" width="102" height="62" fill="#c9d1cb" transform="rotate(-5 131 106)"/>
+  <circle cx="118" cy="98" r="12" fill="#24452f"/><circle cx="146" cy="96" r="10" fill="#24452f"/>
+  <rect x="208" y="66" width="122" height="96" rx="4" fill="#fff" transform="rotate(4 269 114)"/>
+  <rect x="218" y="76" width="102" height="62" fill="#f6efe0" transform="rotate(4 269 114)"/>
+  <circle cx="268" cy="106" r="14" fill="#f4a71d"/>
+  <rect x="140" y="160" width="122" height="56" rx="4" fill="#fff" transform="rotate(-2 201 188)"/>
+  <path d="M156 182h90M156 196h60" stroke="#c9d1cb" stroke-width="4" stroke-linecap="round"/>
+</svg>

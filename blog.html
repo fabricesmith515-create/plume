@@ -5,56 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Le carnet, Prête Plume</title>
   <meta name="description" content="Le carnet de Prête Plume : articles sur le récit de vie, l’écriture romanesque et la transmission.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,wght@1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="entete">
-    <a class="logo" href="index.html">Prête Plume</a>
-    <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
-    <nav class="navigation" id="navigation" aria-label="Navigation principale">
-      <a href="index.html#accompagnements">Accompagnements</a>
-      <a href="index.html#demarche">Démarche</a>
-      <a href="qui-suis-je.html">Qui suis-je ?</a>
-      <a href="blog.html" aria-current="page">Le carnet</a>
-      <a class="bouton" href="index.html#contact">Raconter mon projet</a>
-    </nav>
-  </header>
+  <div class="entete-zone">
+    <header class="entete">
+      <a class="logo" href="index.html"><span class="logo-rond" aria-hidden="true">P</span><span>Prête Plume<b>.</b></span></a>
+      <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav class="navigation" id="navigation" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#demarche">Démarche</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="blog.html" aria-current="page">Le carnet</a>
+        <a class="bouton-nav" href="index.html#contact">Me contacter</a>
+      </nav>
+    </header>
+  </div>
 
-  <main class="page-texte">
-    <h1>Le carnet</h1>
-    <div class="colonne">
-      <p class="chapeau">Des articles sur le récit de vie, l’écriture romanesque et la transmission. Les premiers sont en cours d’écriture et paraîtront ici.</p>
-    </div>
-    <ul class="carnet-liste">
-      <li>
-        <h2 class="h3"><span class="visuellement-cache">À paraître : </span>Pourquoi raconter son histoire dans un livre ?</h2>
-        <p><span class="theme">Récit de vie.</span> Un récit de vie est plus qu’un souvenir : c’est un héritage vivant à partager.</p>
-      </li>
-      <li>
-        <h2 class="h3"><span class="visuellement-cache">À paraître : </span>Biographie ou autobiographie : quelle différence ?</h2>
-        <p><span class="theme">Écriture.</span> Deux manières de raconter une vie, un même besoin de laisser une trace.</p>
-      </li>
-      <li>
-        <h2 class="h3"><span class="visuellement-cache">À paraître : </span>Vous avez une idée de roman : par où commencer ?</h2>
-        <p><span class="theme">Roman.</span> Personnages, intrigue, point de vue : les premières fondations d’un récit qui tient.</p>
-      </li>
-      <li>
-        <h2 class="h3"><span class="visuellement-cache">À paraître : </span>Préserver la mémoire de sa famille</h2>
-        <p><span class="theme">Transmission.</span> Comment recueillir les voix et les anecdotes qui composent une histoire familiale.</p>
-      </li>
-    </ul>
+  <main>
+    <section class="bandeau-page" aria-labelledby="titre">
+      <p class="surtitre">Le carnet</p>
+      <h1 id="titre">Des histoires à lire, des chemins à <span class="accent">écrire</span></h1>
+      <p>Conseils et réflexions autour du récit de vie, de l’écriture romanesque et de la transmission. Les premiers articles arrivent bientôt.</p>
+    </section>
+
+    <section class="section carnet-page">
+      <div class="conteneur">
+        <div class="articles">
+          <article class="article"><img src="images/livre-ouvert.svg" alt="" width="400" height="260"><div><span class="categorie">Récit de vie</span><h2 class="h3">Pourquoi raconter son histoire dans un livre ?</h2><p>Un récit de vie est plus qu’un souvenir : c’est un héritage à partager.</p><span class="bientot">Bientôt en ligne</span></div></article>
+          <article class="article"><img src="images/plume.svg" alt="" width="400" height="260"><div><span class="categorie">Écriture</span><h2 class="h3">Biographie ou autobiographie : quelle différence ?</h2><p>Deux manières de raconter une vie, un même besoin de laisser une trace.</p><span class="bientot">Bientôt en ligne</span></div></article>
+          <article class="article"><img src="images/carnet.svg" alt="" width="400" height="260"><div><span class="categorie">Roman</span><h2 class="h3">Vous avez une idée de roman : par où commencer ?</h2><p>Personnages, intrigue, point de vue : les fondations d’un récit qui tient.</p><span class="bientot">Bientôt en ligne</span></div></article>
+          <article class="article"><img src="images/famille.svg" alt="" width="400" height="260"><div><span class="categorie">Transmission</span><h2 class="h3">Préserver la mémoire de sa famille</h2><p>Recueillir les voix et les anecdotes qui composent une histoire familiale.</p><span class="bientot">Bientôt en ligne</span></div></article>
+        </div>
+      </div>
+    </section>
   </main>
-
   <footer class="pied">
-    <p>© <span class="annee"></span> Prête Plume, biographies, autobiographies et romans sur mesure</p>
-    <nav aria-label="Pied de page">
-      <a href="qui-suis-je.html">Qui suis-je ?</a>
-      <a href="blog.html">Le carnet</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
+    <div class="conteneur">
+      <div>
+        <a class="logo" href="index.html"><span class="logo-rond" aria-hidden="true">P</span><span>Prête Plume<b>.</b></span></a>
+        <p>Biographies, autobiographies et romans écrits sur mesure, publiés sous votre nom.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul><li><a href="index.html#services">Services</a></li><li><a href="index.html#demarche">Démarche</a></li><li><a href="qui-suis-je.html">Qui suis-je ?</a></li><li><a href="blog.html">Le carnet</a></li></ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul><li><a href="index.html#contact">Raconter mon projet</a></li></ul>
+      </div>
+    </div>
+    <p class="pied-bas">© <span class="annee"></span> Prête Plume. Tous droits réservés.</p>
   </footer>
   <script src="script.js"></script>
 </body>

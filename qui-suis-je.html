@@ -4,49 +4,73 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Qui suis-je ? Prête Plume</title>
-  <meta name="description" content="Formée en lettres modernes et diplômée en édition, Prête Plume écrit des récits de vie et des romans depuis 2023.">
+  <meta name="description" content="J’ai étudié les lettres modernes et l’édition, et j’écris récits de vie et romans en indépendant depuis 2023.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,wght@1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="entete">
-    <a class="logo" href="index.html">Prête Plume</a>
-    <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
-    <nav class="navigation" id="navigation" aria-label="Navigation principale">
-      <a href="index.html#accompagnements">Accompagnements</a>
-      <a href="index.html#demarche">Démarche</a>
-      <a href="qui-suis-je.html" aria-current="page">Qui suis-je ?</a>
-      <a href="blog.html">Le carnet</a>
-      <a class="bouton" href="index.html#contact">Raconter mon projet</a>
-    </nav>
-  </header>
+  <div class="entete-zone">
+    <header class="entete">
+      <a class="logo" href="index.html"><span class="logo-rond" aria-hidden="true">P</span><span>Prête Plume<b>.</b></span></a>
+      <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav class="navigation" id="navigation" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#demarche">Démarche</a>
+        <a href="qui-suis-je.html" aria-current="page">Qui suis-je ?</a>
+        <a href="blog.html">Le carnet</a>
+        <a class="bouton-nav" href="index.html#contact">Me contacter</a>
+      </nav>
+    </header>
+  </div>
 
-  <main class="page-texte">
-    <h1>Je donne une forme durable à vos souvenirs</h1>
-    <div class="colonne">
-      <p class="chapeau">Passionnée de littérature, je suis une plume indépendante spécialisée dans les récits de vie et la fiction.</p>
-      <p>Mon rôle n’est pas de parler à votre place. Il est d’écouter ce qui vous rend unique, de recueillir la matière de votre parcours et de trouver le ton juste pour la transmettre.</p>
-      <p>Biographies familiales, autobiographies, romans : j’accompagne chaque projet avec délicatesse, curiosité et l’exigence du mot juste.</p>
+  <main>
+    <section class="bandeau-page" aria-labelledby="titre">
+      <p class="surtitre">Qui suis-je ?</p>
+      <h1 id="titre">Je donne une forme durable à <span class="accent">vos souvenirs</span></h1>
+      <p>Une plume indépendante spécialisée dans les récits de vie et la fiction.</p>
+    </section>
 
-      <dl class="parcours">
-        <div><dt>Formation</dt><dd>Lettres modernes</dd></div>
-        <div><dt>Diplôme</dt><dd>Maîtrise en édition</dd></div>
-        <div><dt>Plume indépendante</dt><dd>Depuis 2023</dd></div>
-      </dl>
-
-      <a class="bouton" href="index.html#contact">Raconter mon projet</a>
-    </div>
+    <section class="section">
+      <div class="conteneur profil">
+        <div class="apropos-visuel">
+          <div class="cercle" aria-hidden="true"></div>
+          <div class="photo"><img src="images/portrait.jpg" alt="Portrait de l’auteur de Prête Plume" width="480" height="480"></div>
+          <div class="nuage" aria-hidden="true"><span>Écoute</span><span>Curiosité</span><span>Mot juste</span><span>Discrétion</span></div>
+        </div>
+        <div class="profil-texte">
+          <p class="chapeau">La littérature m’accompagne depuis toujours. J’ai étudié les lettres modernes puis l’édition avant de devenir prête-plume.</p>
+          <p>Mon rôle n’est pas de parler à votre place. Il est d’écouter ce qui vous rend unique, de recueillir la matière de votre parcours et de trouver le ton juste pour la transmettre.</p>
+          <p>Biographies familiales, autobiographies, romans : j’accompagne chaque projet avec délicatesse, curiosité et l’exigence du mot juste. Le livre terminé est le vôtre, et il paraît sous votre nom.</p>
+          <ul class="parcours">
+            <li><strong>Lettres modernes</strong><span>Formation littéraire</span></li>
+            <li><strong>Maîtrise en édition</strong><span>Diplôme</span></li>
+            <li><strong>Depuis 2023</strong><span>Plume indépendante</span></li>
+          </ul>
+          <a class="bouton" href="index.html#contact">Raconter mon projet <span class="rond" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        </div>
+      </div>
+    </section>
   </main>
-
   <footer class="pied">
-    <p>© <span class="annee"></span> Prête Plume, biographies, autobiographies et romans sur mesure</p>
-    <nav aria-label="Pied de page">
-      <a href="qui-suis-je.html">Qui suis-je ?</a>
-      <a href="blog.html">Le carnet</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
+    <div class="conteneur">
+      <div>
+        <a class="logo" href="index.html"><span class="logo-rond" aria-hidden="true">P</span><span>Prête Plume<b>.</b></span></a>
+        <p>Biographies, autobiographies et romans écrits sur mesure, publiés sous votre nom.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul><li><a href="index.html#services">Services</a></li><li><a href="index.html#demarche">Démarche</a></li><li><a href="qui-suis-je.html">Qui suis-je ?</a></li><li><a href="blog.html">Le carnet</a></li></ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul><li><a href="index.html#contact">Raconter mon projet</a></li></ul>
+      </div>
+    </div>
+    <p class="pied-bas">© <span class="annee"></span> Prête Plume. Tous droits réservés.</p>
   </footer>
   <script src="script.js"></script>
 </body>

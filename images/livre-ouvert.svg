@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Livre ouvert">
+  <rect width="400" height="260" fill="#f6efe0"/>
+  <circle cx="320" cy="60" r="70" fill="#f4a71d" opacity=".9"/>
+  <path d="M60 200 Q130 170 200 196 Q270 170 340 200 L340 90 Q270 62 200 88 Q130 62 60 90Z" fill="#24452f"/>
+  <path d="M70 188 Q132 162 196 184 L196 92 Q132 70 70 96Z" fill="#fff"/>
+  <path d="M204 184 Q268 162 330 188 L330 96 Q268 70 204 92Z" fill="#fff"/>
+  <g stroke="#c9d1cb" stroke-width="4" stroke-linecap="round">
+    <path d="M90 112 Q135 98 178 108"/><path d="M90 128 Q135 114 178 124"/><path d="M90 144 Q135 130 178 140"/><path d="M90 160 Q125 148 150 152"/>
+    <path d="M222 108 Q265 98 310 112"/><path d="M222 124 Q265 114 310 128"/><path d="M222 140 Q265 130 310 144"/>
+  </g>
+  <path d="M250 150 L262 230 L272 214 L284 228 L272 150Z" fill="#f4a71d"/>
+</svg>

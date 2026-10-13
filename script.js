@@ -14,36 +14,13 @@ boutonMenu?.addEventListener('click', () => {
 navigation?.querySelectorAll('a').forEach(lien => lien.addEventListener('click', fermerMenu));
 document.addEventListener('keydown', evenement => { if (evenement.key === 'Escape') fermerMenu(); });
 
-// Année
-const annee = String(new Date().getFullYear());
-document.querySelectorAll('.annee, #feuille-annee').forEach(element => { element.textContent = annee; });
+// Année du pied de page
+document.querySelectorAll('.annee').forEach(element => { element.textContent = new Date().getFullYear(); });
 
-// Page de titre : le nom et le genre choisis s'affichent sur la couverture
-const champNom = document.querySelector('#nom-couverture');
-const feuilleNom = document.querySelector('#feuille-nom');
-const feuilleGenre = document.querySelector('#feuille-genre');
+// Les liens « Parler d'une biographie »… préremplissent le type de projet
 const choixProjet = document.querySelector('#projet');
-
-champNom?.addEventListener('input', () => {
-  const nom = champNom.value.trim();
-  feuilleNom.textContent = nom || 'Votre nom';
-  feuilleNom.classList.toggle('vide', !nom);
-});
-
-function choisirGenre(genre) {
-  if (choixProjet) choixProjet.value = genre;
-}
-
-document.querySelectorAll('input[name="genre-couverture"]').forEach(option => {
-  option.addEventListener('change', () => {
-    feuilleGenre.textContent = option.dataset.titre;
-    choisirGenre(option.value);
-  });
-});
-
-// Les liens « Parler d'une biographie »… préremplissent le formulaire
 document.querySelectorAll('a[data-genre]').forEach(lien => {
-  lien.addEventListener('click', () => choisirGenre(lien.dataset.genre));
+  lien.addEventListener('click', () => { if (choixProjet) choixProjet.value = lien.dataset.genre; });
 });
 
 // Formulaire de contact (Netlify Forms)
@@ -53,7 +30,7 @@ const statut = document.querySelector('#statut');
 formulaire?.addEventListener('submit', async evenement => {
   evenement.preventDefault();
   const bouton = formulaire.querySelector('button[type="submit"]');
-  statut.className = 'statut';
+  statut.className = 'statut large';
   bouton.disabled = true;
   statut.textContent = 'Envoi en cours…';
   try {
@@ -63,13 +40,10 @@ formulaire?.addEventListener('submit', async evenement => {
       body: new URLSearchParams(new FormData(formulaire)).toString()
     });
     if (!reponse.ok) throw new Error(String(reponse.status));
-    formulaire.reset();
-    statut.classList.add('envoye');
-    statut.textContent = 'Demande envoyée. Je vous réponds par e-mail.';
+    window.location.href = 'merci.html';
   } catch {
     statut.classList.add('erreur');
-    statut.textContent = 'L’envoi n’a pas abouti. Vérifiez votre connexion et réessayez.';
-  } finally {
+    statut.textContent = 'L’envoi n’a pas abouti. Vérifiez votre connexion et réessayez dans un instant.';
     bouton.disabled = false;
   }
 });
