@@ -1,34 +1,193 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Prete Plume, biographe et plume romanesque.">
-  <title>Prete Plume — Biographe & plume romanesque</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prête Plume, biographies, autobiographies et romans sur mesure</title>
+  <meta name="description" content="Prête Plume écrit avec vous biographies, autobiographies et romans. Vous racontez, j’écris, le livre paraît sous votre nom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="#accueil"><span>p.</span>prēte plume</a>
-    <button class="menu-button" aria-label="Ouvrir le menu" aria-expanded="false">Menu <i></i></button>
-    <nav class="main-nav" aria-label="Navigation principale">
-      <a href="#accompagnement">Accompagnements</a><a href="qui-suis-je.html">Qui suis-je ?</a><a href="blog.html">Le carnet</a>
-      <a class="nav-cta" href="#contact">Parlons de votre livre <b>↗</b></a>
+  <header class="entete">
+    <a class="logo" href="index.html">Prête Plume</a>
+    <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+    <nav class="navigation" id="navigation" aria-label="Navigation principale">
+      <a href="#accompagnements">Accompagnements</a>
+      <a href="#demarche">Démarche</a>
+      <a href="qui-suis-je.html">Qui suis-je ?</a>
+      <a href="blog.html">Le carnet</a>
+      <a class="bouton" href="#contact">Raconter mon projet</a>
     </nav>
   </header>
+
   <main>
-    <section class="hero" id="accueil">
-      <div class="hero-copy"><p class="kicker">Biographe · plume romanesque</p><h1>Les vies<br>méritent d’être<br><em>transmises.</em></h1><p class="lead">J’écris avec vous des livres intimes et singuliers : biographies, autobiographies et romans qui donnent une forme durable à ce qui compte.</p><div class="hero-actions"><a class="button" href="#contact">Commencer votre histoire <b>↗</b></a><a class="text-button" href="#demarche">Découvrir la démarche <b>↓</b></a></div></div>
-      <div class="book-scene" aria-label="Composition décorative de trois livres"><p>Votre voix.<br>Votre histoire.</p><div class="sun"></div><div class="book book-back">RÉCITS<br>DE VIE</div><div class="book book-middle">JE ME<br>SOUVIENS</div><div class="book book-front">PRETE<br>PLUME <small>— 01</small></div></div>
-      <p class="hero-note">Écoute attentive · confidentialité · écriture sur mesure</p>
+    <section class="ouverture" aria-labelledby="titre">
+      <div>
+        <h1 id="titre">Votre nom sur la couverture, ma plume à l’intérieur.</h1>
+        <p class="chapeau">Je suis prête-plume : j’écris avec vous biographies, autobiographies et romans. Vous racontez, j’écris, et le livre paraît sous votre nom.</p>
+        <div class="actions">
+          <a class="bouton" href="#contact">Raconter mon projet</a>
+          <a href="#demarche">Voir comment nous travaillons</a>
+        </div>
+      </div>
+
+      <figure class="page-de-titre">
+        <div class="feuille" aria-live="polite">
+          <p class="feuille-nom vide" id="feuille-nom">Votre nom</p>
+          <span class="feuille-filet" aria-hidden="true"></span>
+          <p class="feuille-genre" id="feuille-genre">Mémoires</p>
+          <p class="feuille-annee" id="feuille-annee"></p>
+        </div>
+        <figcaption class="reglages">
+          <label for="nom-couverture">Essayez : le nom sur la couverture</label>
+          <input type="text" id="nom-couverture" maxlength="40" autocomplete="name" placeholder="Jeanne Martin">
+          <fieldset class="genres">
+            <legend>Le genre du livre</legend>
+            <label><input type="radio" name="genre-couverture" value="Autobiographie" data-titre="Mémoires" checked><span>Mémoires</span></label>
+            <label><input type="radio" name="genre-couverture" value="Biographie" data-titre="Une vie"><span>Biographie</span></label>
+            <label><input type="radio" name="genre-couverture" value="Roman" data-titre="Roman"><span>Roman</span></label>
+          </fieldset>
+        </figcaption>
+      </figure>
     </section>
-    <section class="statement"><p>« Écrire une vie, c’est faire de la place à ce qui ne doit pas disparaître. »</p></section>
-    <section class="section offers" id="accompagnement"><div class="section-title"><p class="kicker">01 · Accompagnements</p><h2>Un livre qui<br><em>vous ressemble.</em></h2></div><div class="offer-grid"><article><span>01</span><h3>Biographie</h3><p>Un parcours, une famille, une vocation : nous façonnons un récit vivant et fidèle à la personne qui l’a vécu.</p><a href="#contact">En savoir plus <b>↗</b></a></article><article><span>02</span><h3>Autobiographie</h3><p>Vous racontez. Je vous aide à ordonner les souvenirs, trouver le fil et porter votre voix jusqu’au livre.</p><a href="#contact">En savoir plus <b>↗</b></a></article><article><span>03</span><h3>Roman</h3><p>De l’intuition aux derniers mots : univers, personnages et récit prennent progressivement leur pleine dimension.</p><a href="#contact">En savoir plus <b>↗</b></a></article></div></section>
-    <section class="section process" id="demarche"><div class="process-intro"><p class="kicker">02 · La démarche</p><h2>Votre histoire<br>commence par une<br><em>conversation.</em></h2><p>Vous n’avez pas besoin de savoir écrire. Il suffit d’avoir envie de raconter.</p></div><ol><li><span>01</span><div><h3>Nous faisons connaissance</h3><p>Un premier échange pour comprendre votre projet, vos envies et la trace que vous souhaitez laisser.</p></div></li><li><span>02</span><div><h3>Vous partagez votre matière</h3><p>Entretiens, souvenirs, archives ou notes : nous avançons à votre rythme, dans un cadre confidentiel.</p></div></li><li><span>03</span><div><h3>Le manuscrit prend vie</h3><p>J’écris. Vous relisez. Nous ajustons ensemble jusqu’à ce que le livre soit vraiment le vôtre.</p></div></li></ol></section>
-    <section class="about-teaser"><div class="about-portrait"><span>p.</span></div><div><p class="kicker">03 · Qui suis-je ?</p><h2>Une plume au<br>service de votre<br><em>vérité.</em></h2><p>Passionnée de littérature et formée à l’édition, j’accompagne avec attention les récits qui méritent d’être transmis.</p><a class="text-button" href="qui-suis-je.html">Faire connaissance <b>↗</b></a></div></section>
-    <section class="section journal"><div class="journal-head"><div><p class="kicker">04 · Le carnet</p><h2>Autour des<br><em>histoires.</em></h2></div><a class="text-button" href="blog.html">Tous les articles <b>↗</b></a></div><div class="article-grid"><a href="blog.html"><span>Récit de vie · 6 min</span><h3>Pourquoi raconter son histoire dans un livre ?</h3><p>Un récit de vie est un héritage vivant à partager.</p></a><a href="blog.html"><span>Écriture · 5 min</span><h3>Biographie ou autobiographie : quelle différence ?</h3><p>Deux manières de raconter une vie et de laisser une trace.</p></a></div></section>
-    <section class="contact" id="contact"><p class="kicker">Votre premier chapitre</p><h2>Et si nous écrivions<br><em>la suite ensemble ?</em></h2><p>Racontez-moi votre projet en quelques lignes. Chaque grande histoire commence ainsi.</p><a class="button light" href="https://comeup.com/fr/@horizonrose" target="_blank" rel="noreferrer">Me contacter <b>↗</b></a><small>Premier échange sans engagement.</small></section>
+
+    <blockquote class="epigraphe">
+      <p>« Écrire une vie, c’est faire de la place à ce qui ne doit pas disparaître. »</p>
+    </blockquote>
+
+    <section class="section accompagnements" id="accompagnements" aria-labelledby="titre-accompagnements">
+      <div class="conteneur">
+        <div class="section-entete">
+          <h2 id="titre-accompagnements">Trois façons d’écrire un livre ensemble</h2>
+        </div>
+        <dl class="genres-liste">
+          <div>
+            <dt>Biographie</dt>
+            <dd>
+              <p>Le récit d’une autre vie que la vôtre : un parent, un grand-parent, une fondatrice d’entreprise. Je recueille les témoignages et les archives, puis j’écris un récit vivant et fidèle à la personne.</p>
+              <p class="pour-qui">Pour transmettre l’histoire d’un proche. <a href="#contact" data-genre="Biographie">Parler d’une biographie</a></p>
+            </dd>
+          </div>
+          <div>
+            <dt>Autobiographie</dt>
+            <dd>
+              <p>Vous racontez votre propre parcours. Je vous aide à ordonner les souvenirs, à trouver le fil du récit et à garder votre voix jusqu’à la dernière page.</p>
+              <p class="pour-qui">Pour laisser votre histoire, racontée par vous. <a href="#contact" data-genre="Autobiographie">Parler d’une autobiographie</a></p>
+            </dd>
+          </div>
+          <div>
+            <dt>Roman</dt>
+            <dd>
+              <p>Une idée, des personnages, une intrigue en germe. Nous construisons ensemble l’univers et le récit, de l’intuition jusqu’aux derniers mots.</p>
+              <p class="pour-qui">Pour donner forme à une fiction qui vous habite. <a href="#contact" data-genre="Roman">Parler d’un roman</a></p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section demarche" id="demarche" aria-labelledby="titre-demarche">
+      <div class="conteneur">
+        <div class="section-entete">
+          <h2 id="titre-demarche">Tout commence par une conversation</h2>
+          <p>Pas besoin de savoir écrire : il suffit d’avoir envie de raconter.</p>
+        </div>
+        <ol class="etapes">
+          <li>
+            <h3>Nous faisons connaissance</h3>
+            <p>Un premier échange, sans engagement, pour comprendre votre projet et la trace que vous souhaitez laisser.</p>
+          </li>
+          <li>
+            <h3>Vous me confiez vos souvenirs</h3>
+            <p>Entretiens, archives, photos ou notes : nous avançons à votre rythme, dans un cadre confidentiel.</p>
+          </li>
+          <li>
+            <h3>J’écris, vous relisez</h3>
+            <p>Chapitre après chapitre, nous ajustons ensemble jusqu’à ce que le livre soit vraiment le vôtre.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section presentation" aria-labelledby="titre-presentation">
+      <div class="conteneur">
+        <h2 id="titre-presentation">Qui tient la plume ?</h2>
+        <div>
+          <p>Formée en lettres modernes et diplômée d’une maîtrise en édition, j’écris en indépendante depuis 2023.</p>
+          <p>Mon rôle n’est pas de parler à votre place, mais d’écouter ce qui vous rend unique et de trouver le ton juste pour le transmettre.</p>
+          <a href="qui-suis-je.html">Lire mon parcours</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-carnet">
+      <div class="conteneur">
+        <div class="section-entete">
+          <h2 id="titre-carnet">Le carnet</h2>
+          <p>Des articles sur le récit de vie, l’écriture et la transmission. Les premiers sont en cours d’écriture. <a href="blog.html">Voir le carnet</a></p>
+        </div>
+        <ul class="carnet-liste">
+          <li><h3>Pourquoi raconter son histoire dans un livre ?</h3></li>
+          <li><h3>Biographie ou autobiographie : quelle différence ?</h3></li>
+          <li><h3>Vous avez une idée de roman : par où commencer ?</h3></li>
+          <li><h3>Préserver la mémoire de sa famille</h3></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="titre-contact">
+      <div class="conteneur">
+        <div>
+          <h2 id="titre-contact">Parlez-moi de votre livre</h2>
+          <p class="chapeau">Quelques lignes suffisent. Le premier échange est sans engagement, et tout ce que vous me confiez reste confidentiel.</p>
+        </div>
+        <!-- Formulaire reçu par Netlify Forms : les demandes apparaissent dans Netlify, onglet Forms -->
+        <form class="formulaire" id="formulaire-contact" name="contact" action="/merci.html" method="POST" data-netlify="true" netlify-honeypot="adresse-web">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="visuellement-cache"><label>Ne pas remplir : <input name="adresse-web" tabindex="-1" autocomplete="off"></label></p>
+          <div class="champ">
+            <label for="nom">Prénom et nom</label>
+            <input type="text" id="nom" name="nom" autocomplete="name" required>
+          </div>
+          <div class="champ">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="champ">
+            <label for="telephone">Téléphone <span class="facultatif">(facultatif)</span></label>
+            <input type="tel" id="telephone" name="telephone" autocomplete="tel">
+          </div>
+          <div class="champ">
+            <label for="projet">Type de projet</label>
+            <select id="projet" name="projet">
+              <option>Biographie</option>
+              <option selected>Autobiographie</option>
+              <option>Roman</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+          </div>
+          <div class="champ large">
+            <label for="message">Votre projet en quelques lignes</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button class="bouton" type="submit">Envoyer ma demande</button>
+          <p class="statut" id="statut" role="status"></p>
+        </form>
+      </div>
+    </section>
   </main>
-  <footer><a class="logo" href="#accueil"><span>p.</span>prēte plume</a><p>Biographe & plume romanesque</p><p>© <span id="year"></span></p></footer><script src="script.js"></script>
-</body></html>
+
+  <footer class="pied">
+    <p>© <span class="annee"></span> Prête Plume, biographies, autobiographies et romans sur mesure</p>
+    <nav aria-label="Pied de page">
+      <a href="qui-suis-je.html">Qui suis-je ?</a>
+      <a href="blog.html">Le carnet</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
