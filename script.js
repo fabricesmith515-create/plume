@@ -41,9 +41,11 @@ formulaire?.addEventListener('submit', async evenement => {
     });
     if (!reponse.ok) throw new Error(String(reponse.status));
     window.location.href = 'merci.html';
-  } catch {
+  } catch (erreur) {
+    // Le code (404, 405…) aide à diagnostiquer : 404 signifie que Netlify ne connaît pas le formulaire
+    const code = /^\d+$/.test(erreur.message) ? ` (code ${erreur.message})` : ' (réseau)';
     statut.classList.add('erreur');
-    statut.textContent = 'L’envoi n’a pas abouti. Vérifiez votre connexion et réessayez dans un instant.';
+    statut.textContent = `L’envoi n’a pas abouti${code}. Réessayez dans un instant.`;
     bouton.disabled = false;
   }
 });
