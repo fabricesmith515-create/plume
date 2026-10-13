@@ -17,13 +17,7 @@ document.addEventListener('keydown', evenement => { if (evenement.key === 'Escap
 // Année du pied de page
 document.querySelectorAll('.annee').forEach(element => { element.textContent = new Date().getFullYear(); });
 
-// Les liens « Parler d'une biographie »… préremplissent le type de projet
-const choixProjet = document.querySelector('#projet');
-document.querySelectorAll('a[data-genre]').forEach(lien => {
-  lien.addEventListener('click', () => { if (choixProjet) choixProjet.value = lien.dataset.genre; });
-});
-
-// Formulaires Netlify (contact et lettre d'information)
+// Formulaires Netlify (lettre d'information)
 document.querySelectorAll('.formulaire-netlify').forEach(formulaire => {
   const statut = formulaire.querySelector('.statut');
   formulaire.addEventListener('submit', async evenement => {

@@ -504,3 +504,14 @@ a.article:hover .lire { color: var(--jaune-fonce); }
 }
 .lettre-formulaire .bouton { padding: 15px 28px; justify-content: center; }
 @media (max-width: 560px) { .lettre-formulaire .bouton { flex: 1 1 100%; } }
+
+/* Réservation d'un appel (Calendly) */
+
+.reservation { display: flex; flex-direction: column; padding: 12px; min-width: 0; }
+.calendly-inline-widget { min-width: 280px; height: 700px; }
+.reservation-secours { margin: 8px 0 4px; text-align: center; font-size: .9rem; color: var(--texte); }
+.reservation-secours a { color: var(--vert); font-weight: 700; }
+
+@media (max-width: 860px) {
+  .calendly-inline-widget { height: 1000px; }
+}
