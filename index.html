@@ -8,7 +8,7 @@
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,wght@1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,wght@0,400;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
       <nav class="navigation" id="navigation" aria-label="Navigation principale">
         <a href="index.html" aria-current="page">Accueil</a>
         <a href="#services">Services</a>
-        <a href="#demarche">Démarche</a>
+        <a href="#extraits">Extraits</a>
         <a href="qui-suis-je.html">Qui suis-je ?</a>
         <a href="blog.html">Le carnet</a>
         <a class="bouton-nav" href="#contact">Me contacter</a>
@@ -92,6 +92,39 @@
             <p>Une idée, des personnages, une intrigue en germe. Nous construisons ensemble l’univers et le récit, de l’intuition jusqu’aux derniers mots.</p>
             <a class="lien" href="#contact" data-genre="Roman">Parler d’un roman <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section extraits" id="extraits" aria-labelledby="titre-extraits">
+      <div class="conteneur">
+        <div class="section-entete">
+          <div>
+            <p class="surtitre">Mes extraits</p>
+            <h2 id="titre-extraits">Quelques pages pour <span class="accent">découvrir ma plume</span></h2>
+            <p>Les livres de mes clients restent confidentiels. Ces extraits sont des textes d’exemple, écrits pour vous montrer le ton de chaque genre.</p>
+          </div>
+          <a class="bouton bouton-contour" href="extraits.html">Tous les extraits</a>
+        </div>
+        <div class="pages-livre">
+          <a class="page-livre" href="extraits.html#biographie">
+            <span class="page-genre">Biographie</span>
+            <h3>Le fournil de la rue des Tanneurs</h3>
+            <p>Marcel se levait à trois heures. Pas trois heures et quart, pas « vers trois heures ». Trois heures, comme son père avant lui.</p>
+            <span class="page-lire">Lire l’extrait</span>
+          </a>
+          <a class="page-livre" href="extraits.html#autobiographie">
+            <span class="page-genre">Autobiographie</span>
+            <h3>Le train de 6 h 42</h3>
+            <p>J’avais dix-huit ans, une valise en carton prêtée par ma tante et vingt francs cousus dans la doublure de ma veste.</p>
+            <span class="page-lire">Lire l’extrait</span>
+          </a>
+          <a class="page-livre" href="extraits.html#roman">
+            <span class="page-genre">Roman</span>
+            <h3>Les heures bleues</h3>
+            <p>Le piano n’avait pas été ouvert depuis la mort d’Hélène. Personne n’avait osé.</p>
+            <span class="page-lire">Lire l’extrait</span>
+          </a>
         </div>
       </div>
     </section>
@@ -217,6 +250,42 @@
       </div>
     </section>
 
+    <section class="section faq" id="questions" aria-labelledby="titre-faq">
+      <div class="conteneur faq-grille">
+        <div>
+          <p class="surtitre">Questions fréquentes</p>
+          <h2 id="titre-faq">Vous vous <span class="accent">demandez</span> peut-être…</h2>
+          <p>Une autre question ? Posez-la directement dans le formulaire de contact.</p>
+        </div>
+        <div class="questions">
+          <details class="question">
+            <summary>Faut-il savoir écrire pour faire un livre avec vous ?</summary>
+            <p>Non. Vous racontez, à l’oral, avec vos mots. Je pose les questions, je mets en ordre et j’écris. Votre rôle est de partager vos souvenirs ou vos idées, et de relire.</p>
+          </details>
+          <details class="question">
+            <summary>Qui est l’auteur du livre ?</summary>
+            <p>Vous. Le livre paraît sous votre nom, ou sous celui de la personne dont il raconte la vie. Mon travail reste discret.</p>
+          </details>
+          <details class="question">
+            <summary>Ce que je vous confie reste-t-il confidentiel ?</summary>
+            <p>Oui. Vos souvenirs, vos documents et le texte du livre ne sont jamais partagés. C’est aussi pour cette raison que les extraits présentés sur ce site sont des textes d’exemple.</p>
+          </details>
+          <details class="question">
+            <summary>Comment se passent nos échanges ?</summary>
+            <p>Tout commence par un premier échange sans engagement pour comprendre votre projet. Viennent ensuite des entretiens, à votre rythme, pendant lesquels vous me racontez votre histoire. Je vous envoie les chapitres au fur et à mesure pour que vous puissiez les relire et les corriger.</p>
+          </details>
+          <details class="question">
+            <summary>Combien de temps faut-il pour écrire un livre ?</summary>
+            <p>Cela dépend de la longueur du livre et de la matière à recueillir. Nous fixons ensemble un calendrier réaliste dès le premier échange.</p>
+          </details>
+          <details class="question">
+            <summary>Combien coûte un livre ?</summary>
+            <p>Chaque projet est différent. Le tarif dépend surtout de la longueur du livre et du nombre d’entretiens. Je vous propose un devis après le premier échange, qui reste sans engagement.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact" id="contact" aria-labelledby="titre-contact">
       <div class="conteneur">
         <div class="contact-boite">
@@ -261,7 +330,7 @@
       </div>
       <div>
         <h3>Navigation</h3>
-        <ul><li><a href="index.html#services">Services</a></li><li><a href="index.html#demarche">Démarche</a></li><li><a href="qui-suis-je.html">Qui suis-je ?</a></li><li><a href="blog.html">Le carnet</a></li></ul>
+        <ul><li><a href="index.html#services">Services</a></li><li><a href="index.html#demarche">Démarche</a></li><li><a href="extraits.html">Extraits</a></li><li><a href="qui-suis-je.html">Qui suis-je ?</a></li><li><a href="blog.html">Le carnet</a></li></ul>
       </div>
       <div>
         <h3>Contact</h3>
