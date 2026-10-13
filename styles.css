@@ -330,3 +330,36 @@ a.article:hover .lire { color: var(--jaune-fonce); }
   a.article { transition: none; }
   a.article:hover { transform: none; }
 }
+
+/* Avis clients : deux rangées qui défilent en sens inverse */
+
+.avis { overflow: hidden; }
+.avis .section-entete a { color: var(--vert); font-weight: 600; }
+.defile {
+  --duree: 40s;
+  overflow: hidden;
+  padding: 10px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+}
+.defile-piste { display: flex; gap: 20px; width: max-content; animation: defile-avis var(--duree, 40s) linear infinite; }
+.defile-inverse .defile-piste { animation-direction: reverse; }
+.defile:hover .defile-piste, .defile:focus-within .defile-piste { animation-play-state: paused; }
+@keyframes defile-avis { to { transform: translateX(calc(-50% - 10px)); } }
+
+.avis-carte { width: 320px; flex: none; margin: 0; padding: 22px; border-radius: 18px; background: var(--blanc); border: 1px solid var(--filet); }
+.avis-tete { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.avis-initiale { display: grid; place-items: center; width: 42px; height: 42px; flex: none; border-radius: 50%; background: var(--vert); color: var(--jaune); font-weight: 800; }
+.avis-tete figcaption { display: flex; flex-direction: column; line-height: 1.3; min-width: 0; }
+.avis-tete strong { font-size: .95rem; }
+.avis-tete figcaption time { font-size: .8rem; color: var(--texte); }
+.avis-carte blockquote { margin: 0; font-size: .95rem; color: #39433d; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+
+@media (max-width: 560px) {
+  .avis-carte { width: 270px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .defile { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .defile-piste { animation: none; padding: 0 var(--gouttiere); }
+}

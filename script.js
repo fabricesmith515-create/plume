@@ -49,3 +49,21 @@ formulaire?.addEventListener('submit', async evenement => {
     bouton.disabled = false;
   }
 });
+
+// Avis : on répète les cartes jusqu'à remplir l'écran, puis on double la rangée
+// pour que le défilement boucle sans coupure, quel que soit le nombre d'avis
+document.querySelectorAll('.defile-piste').forEach(piste => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const originaux = [...piste.children];
+  if (!originaux.length) return;
+  const ajouterCopies = cartes => cartes.forEach(carte => {
+    const copie = carte.cloneNode(true);
+    copie.setAttribute('aria-hidden', 'true');
+    piste.appendChild(copie);
+  });
+  const largeurVisee = Math.max(window.innerWidth, 1600);
+  while (piste.scrollWidth < largeurVisee) ajouterCopies(originaux);
+  ajouterCopies([...piste.children]);
+  // Vitesse constante : environ 7 secondes par carte
+  piste.style.setProperty('--duree', `${piste.children.length / 2 * 7}s`);
+});
