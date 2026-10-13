@@ -23,31 +23,37 @@ document.querySelectorAll('a[data-genre]').forEach(lien => {
   lien.addEventListener('click', () => { if (choixProjet) choixProjet.value = lien.dataset.genre; });
 });
 
-// Formulaire de contact (Netlify Forms)
-const formulaire = document.querySelector('#formulaire-contact');
-const statut = document.querySelector('#statut');
-
-formulaire?.addEventListener('submit', async evenement => {
-  evenement.preventDefault();
-  const bouton = formulaire.querySelector('button[type="submit"]');
-  statut.className = 'statut large';
-  bouton.disabled = true;
-  statut.textContent = 'Envoi en cours…';
-  try {
-    const reponse = await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(formulaire)).toString()
-    });
-    if (!reponse.ok) throw new Error(String(reponse.status));
-    window.location.href = 'merci.html';
-  } catch (erreur) {
-    // Le code (404, 405…) aide à diagnostiquer : 404 signifie que Netlify ne connaît pas le formulaire
-    const code = /^\d+$/.test(erreur.message) ? ` (code ${erreur.message})` : ' (réseau)';
-    statut.classList.add('erreur');
-    statut.textContent = `L’envoi n’a pas abouti${code}. Réessayez dans un instant.`;
+// Formulaires Netlify (contact et lettre d'information)
+document.querySelectorAll('.formulaire-netlify').forEach(formulaire => {
+  const statut = formulaire.querySelector('.statut');
+  formulaire.addEventListener('submit', async evenement => {
+    evenement.preventDefault();
+    const bouton = formulaire.querySelector('button[type="submit"]');
+    statut.classList.remove('erreur', 'envoye');
+    bouton.disabled = true;
+    statut.textContent = 'Envoi en cours…';
+    try {
+      const reponse = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(formulaire)).toString()
+      });
+      if (!reponse.ok) throw new Error(String(reponse.status));
+      if (formulaire.dataset.redirection) {
+        window.location.href = formulaire.dataset.redirection;
+        return;
+      }
+      formulaire.reset();
+      statut.classList.add('envoye');
+      statut.textContent = formulaire.dataset.succes;
+    } catch (erreur) {
+      // Le code (404, 405…) aide à diagnostiquer : 404 signifie que Netlify ne connaît pas le formulaire
+      const code = /^\d+$/.test(erreur.message) ? ` (code ${erreur.message})` : ' (réseau)';
+      statut.classList.add('erreur');
+      statut.textContent = `L’envoi n’a pas abouti${code}. Réessayez dans un instant.`;
+    }
     bouton.disabled = false;
-  }
+  });
 });
 
 // Avis : on répète les cartes jusqu'à remplir l'écran, puis on double la rangée
