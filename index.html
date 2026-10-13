@@ -4,96 +4,104 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prête Plume, biographies, autobiographies et romans sur mesure</title>
-  <meta name="description" content="Prête Plume écrit avec vous biographies, autobiographies et romans. Vous racontez, j’écris, le livre paraît sous votre nom.">
+  <meta name="description" content="Prête Plume écrit avec vous biographies, autobiographies et romans. Vous racontez, j’écris, et le livre paraît sous votre nom.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,wght@1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="entete">
-    <a class="logo" href="index.html">Prête Plume</a>
-    <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
-    <nav class="navigation" id="navigation" aria-label="Navigation principale">
-      <a href="#accompagnements">Accompagnements</a>
-      <a href="#demarche">Démarche</a>
-      <a href="qui-suis-je.html">Qui suis-je ?</a>
-      <a href="blog.html">Le carnet</a>
-      <a class="bouton" href="#contact">Raconter mon projet</a>
-    </nav>
-  </header>
+  <div class="entete-zone">
+    <header class="entete">
+      <a class="logo" href="index.html"><span class="logo-rond" aria-hidden="true">P</span><span>Prête Plume<b>.</b></span></a>
+      <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav class="navigation" id="navigation" aria-label="Navigation principale">
+        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#demarche">Démarche</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="blog.html">Le carnet</a>
+        <a class="bouton-nav" href="#contact">Me contacter</a>
+      </nav>
+    </header>
+  </div>
 
   <main>
     <section class="ouverture" aria-labelledby="titre">
       <div>
-        <h1 id="titre">Votre nom sur la couverture, ma plume à l’intérieur.</h1>
-        <p class="chapeau">Je suis prête-plume : j’écris avec vous biographies, autobiographies et romans. Vous racontez, j’écris, et le livre paraît sous votre nom.</p>
+        <p class="salut">Bonjour !</p>
+        <h1 id="titre">Je prête ma plume à <span class="accent">vos histoires</span>, votre nom sur la couverture.</h1>
+        <p class="chapeau">Biographies, autobiographies et romans : vous racontez, j’écris avec vous, et le livre paraît sous votre nom. Pas besoin de savoir écrire, il suffit d’avoir envie de transmettre.</p>
         <div class="actions">
-          <a class="bouton" href="#contact">Raconter mon projet</a>
-          <a href="#demarche">Voir comment nous travaillons</a>
+          <a class="bouton" href="#contact">Raconter mon projet <span class="rond" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+          <a class="bouton bouton-contour" href="#services">Voir les services</a>
         </div>
       </div>
 
-      <figure class="page-de-titre">
-        <div class="feuille" aria-live="polite">
-          <p class="feuille-nom vide" id="feuille-nom">Votre nom</p>
-          <span class="feuille-filet" aria-hidden="true"></span>
-          <p class="feuille-genre" id="feuille-genre">Mémoires</p>
-          <p class="feuille-annee" id="feuille-annee"></p>
-        </div>
-        <figcaption class="reglages">
-          <label for="nom-couverture">Essayez : le nom sur la couverture</label>
-          <input type="text" id="nom-couverture" maxlength="40" autocomplete="name" placeholder="Jeanne Martin">
-          <fieldset class="genres">
-            <legend>Le genre du livre</legend>
-            <label><input type="radio" name="genre-couverture" value="Autobiographie" data-titre="Mémoires" checked><span>Mémoires</span></label>
-            <label><input type="radio" name="genre-couverture" value="Biographie" data-titre="Une vie"><span>Biographie</span></label>
-            <label><input type="radio" name="genre-couverture" value="Roman" data-titre="Roman"><span>Roman</span></label>
-          </fieldset>
-        </figcaption>
-      </figure>
+      <div class="visuel">
+        <div class="forme" aria-hidden="true"></div>
+        <div class="forme-2" aria-hidden="true"></div>
+        <div class="photo"><img src="images/portrait.jpg" alt="Portrait de l’auteur de Prête Plume" width="480" height="480"></div>
+        <a class="badge" href="#contact" aria-label="Écrivons votre livre : me contacter">
+          <svg class="texte-rond" viewBox="0 0 100 100" aria-hidden="true">
+            <defs><path id="cercle-badge" d="M50 50 m-38 0 a38 38 0 1 1 76 0 a38 38 0 1 1 -76 0"/></defs>
+            <text fill="currentColor" font-size="11" font-weight="700" font-family="Plus Jakarta Sans, sans-serif" xml:space="preserve"><textPath href="#cercle-badge" textLength="232" lengthAdjust="spacing">ÉCRIVONS  VOTRE  LIVRE  ✳</textPath></text>
+          </svg>
+          <span class="coeur" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12L12 4M6 4h6v6"/></svg></span>
+        </a>
+        <span class="pastille pastille-vert p1">Biographe</span>
+        <span class="pastille pastille-jaune p2">Plume romanesque</span>
+      </div>
     </section>
 
-    <blockquote class="epigraphe">
-      <p>« Écrire une vie, c’est faire de la place à ce qui ne doit pas disparaître. »</p>
-    </blockquote>
+    <div class="bandeau" aria-hidden="true">
+      <div class="bandeau-piste">
+        <div class="bandeau-ruban">
+          <span>Biographie</span><span>Autobiographie</span><span>Roman</span><span>Mémoires</span><span>Histoire de famille</span><span>Récit de vie</span>
+          <span>Biographie</span><span>Autobiographie</span><span>Roman</span><span>Mémoires</span><span>Histoire de famille</span><span>Récit de vie</span>
+        </div>
+      </div>
+    </div>
 
-    <section class="section accompagnements" id="accompagnements" aria-labelledby="titre-accompagnements">
+    <section class="section" id="services" aria-labelledby="titre-services">
       <div class="conteneur">
         <div class="section-entete">
-          <h2 id="titre-accompagnements">Trois façons d’écrire un livre ensemble</h2>
+          <div>
+            <p class="surtitre">Services</p>
+            <h2 id="titre-services">Les livres que <span class="accent">j’écris</span> avec vous</h2>
+          </div>
+          <a class="bouton" href="#contact">Demander un échange <span class="rond" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
         </div>
-        <dl class="genres-liste">
-          <div>
-            <dt>Biographie</dt>
-            <dd>
-              <p>Le récit d’une autre vie que la vôtre : un parent, un grand-parent, une fondatrice d’entreprise. Je recueille les témoignages et les archives, puis j’écris un récit vivant et fidèle à la personne.</p>
-              <p class="pour-qui">Pour transmettre l’histoire d’un proche. <a href="#contact" data-genre="Biographie">Parler d’une biographie</a></p>
-            </dd>
-          </div>
-          <div>
-            <dt>Autobiographie</dt>
-            <dd>
-              <p>Vous racontez votre propre parcours. Je vous aide à ordonner les souvenirs, à trouver le fil du récit et à garder votre voix jusqu’à la dernière page.</p>
-              <p class="pour-qui">Pour laisser votre histoire, racontée par vous. <a href="#contact" data-genre="Autobiographie">Parler d’une autobiographie</a></p>
-            </dd>
-          </div>
-          <div>
-            <dt>Roman</dt>
-            <dd>
-              <p>Une idée, des personnages, une intrigue en germe. Nous construisons ensemble l’univers et le récit, de l’intuition jusqu’aux derniers mots.</p>
-              <p class="pour-qui">Pour donner forme à une fiction qui vous habite. <a href="#contact" data-genre="Roman">Parler d’un roman</a></p>
-            </dd>
-          </div>
-        </dl>
+        <div class="cartes">
+          <article class="carte">
+            <span class="icone" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#24452f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="11" r="5"/><path d="M6 27c1.5-5 5.5-8 10-8s8.5 3 10 8"/><path d="M24 6l3-2M25 10h3" stroke="#f4a71d"/></svg></span>
+            <h3>Biographie</h3>
+            <p>Le récit de la vie d’un proche : un parent, un grand-parent, une fondatrice d’entreprise. Je recueille témoignages et archives, puis j’écris un récit vivant et fidèle.</p>
+            <a class="lien" href="#contact" data-genre="Biographie">Parler d’une biographie <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </article>
+          <article class="carte">
+            <span class="icone" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#24452f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h9a3 3 0 013 3v16a2.5 2.5 0 00-2.5-2.5H5z"/><path d="M27 7h-9a3 3 0 00-1 .2"/><path d="M27 7v16.5h-9.5A2.5 2.5 0 0015 26"/><path d="M20 12h4M20 16h4" stroke="#f4a71d"/></svg></span>
+            <h3>Autobiographie</h3>
+            <p>Vous racontez votre propre parcours. Je vous aide à ordonner les souvenirs, à trouver le fil du récit et à garder votre voix jusqu’à la dernière page.</p>
+            <a class="lien" href="#contact" data-genre="Autobiographie">Parler d’une autobiographie <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </article>
+          <article class="carte">
+            <span class="icone" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="#24452f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4l4 4-15 15-6 2 2-6z"/><path d="M20 8l4 4"/><path d="M5 28h22" stroke="#f4a71d"/></svg></span>
+            <h3>Roman</h3>
+            <p>Une idée, des personnages, une intrigue en germe. Nous construisons ensemble l’univers et le récit, de l’intuition jusqu’aux derniers mots.</p>
+            <a class="lien" href="#contact" data-genre="Roman">Parler d’un roman <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section demarche" id="demarche" aria-labelledby="titre-demarche">
       <div class="conteneur">
-        <div class="section-entete">
-          <h2 id="titre-demarche">Tout commence par une conversation</h2>
-          <p>Pas besoin de savoir écrire : il suffit d’avoir envie de raconter.</p>
+        <div class="section-entete centre">
+          <p class="surtitre">La démarche</p>
+          <h2 id="titre-demarche">Tout commence par <span class="accent">une conversation</span></h2>
+          <p>Nous avançons à votre rythme, en trois temps.</p>
         </div>
         <ol class="etapes">
           <li>
@@ -102,7 +110,7 @@
           </li>
           <li>
             <h3>Vous me confiez vos souvenirs</h3>
-            <p>Entretiens, archives, photos ou notes : nous avançons à votre rythme, dans un cadre confidentiel.</p>
+            <p>Entretiens, archives, photos ou notes : tout ce que vous me confiez reste confidentiel.</p>
           </li>
           <li>
             <h3>J’écris, vous relisez</h3>
@@ -112,13 +120,26 @@
       </div>
     </section>
 
-    <section class="section presentation" aria-labelledby="titre-presentation">
+    <section class="section apropos" aria-labelledby="titre-apropos">
       <div class="conteneur">
-        <h2 id="titre-presentation">Qui tient la plume ?</h2>
+        <div class="apropos-visuel">
+          <div class="cercle" aria-hidden="true"></div>
+          <div class="photo"><img src="images/portrait.jpg" alt="" width="480" height="480" loading="lazy"></div>
+          <div class="nuage" aria-hidden="true"><span>Entretiens</span><span>Écriture</span><span>Relecture</span><span>Mise en page</span><span>Transmission</span></div>
+        </div>
         <div>
-          <p>Formée en lettres modernes et diplômée d’une maîtrise en édition, j’écris en indépendante depuis 2023.</p>
-          <p>Mon rôle n’est pas de parler à votre place, mais d’écouter ce qui vous rend unique et de trouver le ton juste pour le transmettre.</p>
-          <a href="qui-suis-je.html">Lire mon parcours</a>
+          <p class="surtitre">Qui suis-je ?</p>
+          <h2 id="titre-apropos">La plume derrière <span class="accent">Prête Plume</span></h2>
+          <p>J’ai étudié les lettres modernes puis l’édition, et j’écris en indépendant depuis 2023. Mon rôle n’est pas de parler à votre place, mais d’écouter ce qui vous rend unique et de trouver le ton juste pour le transmettre.</p>
+          <ul class="chiffres">
+            <li><strong>2023</strong><span>Plume indépendante depuis</span></li>
+            <li><strong>3</strong><span>Genres d’écriture</span></li>
+            <li><strong>100 %</strong><span>Confidentiel</span></li>
+          </ul>
+          <div class="actions">
+            <a class="bouton bouton-jaune" href="qui-suis-je.html">Lire mon parcours <span class="rond" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+            <span class="signature" aria-hidden="true">Prête Plume</span>
+          </div>
         </div>
       </div>
     </section>
@@ -126,67 +147,73 @@
     <section class="section" aria-labelledby="titre-carnet">
       <div class="conteneur">
         <div class="section-entete">
-          <h2 id="titre-carnet">Le carnet</h2>
-          <p>Des articles sur le récit de vie, l’écriture et la transmission. Les premiers sont en cours d’écriture. <a href="blog.html">Voir le carnet</a></p>
+          <div>
+            <p class="surtitre">Le carnet</p>
+            <h2 id="titre-carnet">Autour des <span class="accent">histoires</span></h2>
+          </div>
+          <a class="bouton bouton-contour" href="blog.html">Voir le carnet</a>
         </div>
-        <ul class="carnet-liste">
-          <li><h3>Pourquoi raconter son histoire dans un livre ?</h3></li>
-          <li><h3>Biographie ou autobiographie : quelle différence ?</h3></li>
-          <li><h3>Vous avez une idée de roman : par où commencer ?</h3></li>
-          <li><h3>Préserver la mémoire de sa famille</h3></li>
-        </ul>
+        <div class="articles">
+          <article class="article"><img src="images/livre-ouvert.svg" alt="" width="400" height="260" loading="lazy"><div><span class="categorie">Récit de vie</span><h3>Pourquoi raconter son histoire dans un livre ?</h3><p>Un récit de vie est plus qu’un souvenir : c’est un héritage à partager.</p><span class="bientot">Bientôt en ligne</span></div></article>
+          <article class="article"><img src="images/plume.svg" alt="" width="400" height="260" loading="lazy"><div><span class="categorie">Écriture</span><h3>Biographie ou autobiographie : quelle différence ?</h3><p>Deux manières de raconter une vie, un même besoin de laisser une trace.</p><span class="bientot">Bientôt en ligne</span></div></article>
+          <article class="article"><img src="images/carnet.svg" alt="" width="400" height="260" loading="lazy"><div><span class="categorie">Roman</span><h3>Vous avez une idée de roman : par où commencer ?</h3><p>Personnages, intrigue, point de vue : les fondations d’un récit qui tient.</p><span class="bientot">Bientôt en ligne</span></div></article>
+          <article class="article"><img src="images/famille.svg" alt="" width="400" height="260" loading="lazy"><div><span class="categorie">Transmission</span><h3>Préserver la mémoire de sa famille</h3><p>Recueillir les voix et les anecdotes qui composent une histoire familiale.</p><span class="bientot">Bientôt en ligne</span></div></article>
+        </div>
       </div>
     </section>
 
     <section class="section contact" id="contact" aria-labelledby="titre-contact">
       <div class="conteneur">
-        <div>
-          <h2 id="titre-contact">Parlez-moi de votre livre</h2>
-          <p class="chapeau">Quelques lignes suffisent. Le premier échange est sans engagement, et tout ce que vous me confiez reste confidentiel.</p>
+        <div class="contact-boite">
+          <div class="contact-infos">
+            <p class="surtitre">Contact</p>
+            <h2 id="titre-contact">Parlez-moi de <span class="accent">votre livre</span></h2>
+            <p>Quelques lignes suffisent. Je vous réponds par e-mail pour fixer un premier échange.</p>
+            <ul class="engagements">
+              <li>Premier échange sans engagement</li>
+              <li>Confidentialité totale</li>
+              <li>Un livre écrit à votre rythme</li>
+            </ul>
+          </div>
+          <form class="formulaire" id="formulaire-contact" name="contact" action="/merci.html" method="POST" data-netlify="true" netlify-honeypot="adresse-web">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="visuellement-cache"><label>Ne pas remplir : <input name="adresse-web" tabindex="-1" autocomplete="off"></label></p>
+            <label class="champ">Prénom et nom<input type="text" name="nom" autocomplete="name" required></label>
+            <label class="champ">E-mail<input type="email" name="email" autocomplete="email" required></label>
+            <label class="champ">Téléphone <span class="facultatif">(facultatif)</span><input type="tel" name="telephone" autocomplete="tel"></label>
+            <label class="champ">Type de projet
+              <select name="projet" id="projet">
+                <option>Biographie</option>
+                <option>Autobiographie</option>
+                <option>Roman</option>
+                <option selected>Je ne sais pas encore</option>
+              </select>
+            </label>
+            <label class="champ large">Votre projet en quelques lignes<textarea name="message" required></textarea></label>
+            <button class="bouton large" type="submit">Envoyer ma demande <span class="rond" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></button>
+            <p class="statut large" id="statut" role="status"></p>
+          </form>
         </div>
-        <!-- Formulaire reçu par Netlify Forms : les demandes apparaissent dans Netlify, onglet Forms -->
-        <form class="formulaire" id="formulaire-contact" name="contact" action="/merci.html" method="POST" data-netlify="true" netlify-honeypot="adresse-web">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="visuellement-cache"><label>Ne pas remplir : <input name="adresse-web" tabindex="-1" autocomplete="off"></label></p>
-          <div class="champ">
-            <label for="nom">Prénom et nom</label>
-            <input type="text" id="nom" name="nom" autocomplete="name" required>
-          </div>
-          <div class="champ">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
-          </div>
-          <div class="champ">
-            <label for="telephone">Téléphone <span class="facultatif">(facultatif)</span></label>
-            <input type="tel" id="telephone" name="telephone" autocomplete="tel">
-          </div>
-          <div class="champ">
-            <label for="projet">Type de projet</label>
-            <select id="projet" name="projet">
-              <option>Biographie</option>
-              <option selected>Autobiographie</option>
-              <option>Roman</option>
-              <option>Je ne sais pas encore</option>
-            </select>
-          </div>
-          <div class="champ large">
-            <label for="message">Votre projet en quelques lignes</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button class="bouton" type="submit">Envoyer ma demande</button>
-          <p class="statut" id="statut" role="status"></p>
-        </form>
       </div>
     </section>
   </main>
 
   <footer class="pied">
-    <p>© <span class="annee"></span> Prête Plume, biographies, autobiographies et romans sur mesure</p>
-    <nav aria-label="Pied de page">
-      <a href="qui-suis-je.html">Qui suis-je ?</a>
-      <a href="blog.html">Le carnet</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="conteneur">
+      <div>
+        <a class="logo" href="index.html"><span class="logo-rond" aria-hidden="true">P</span><span>Prête Plume<b>.</b></span></a>
+        <p>Biographies, autobiographies et romans écrits sur mesure, publiés sous votre nom.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul><li><a href="index.html#services">Services</a></li><li><a href="index.html#demarche">Démarche</a></li><li><a href="qui-suis-je.html">Qui suis-je ?</a></li><li><a href="blog.html">Le carnet</a></li></ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul><li><a href="index.html#contact">Raconter mon projet</a></li></ul>
+      </div>
+    </div>
+    <p class="pied-bas">© <span class="annee"></span> Prête Plume. Tous droits réservés.</p>
   </footer>
   <script src="script.js"></script>
 </body>
