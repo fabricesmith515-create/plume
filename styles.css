@@ -520,3 +520,11 @@ a.article:hover .lire { color: var(--jaune-fonce); }
 
 .lecture-image-carree { aspect-ratio: 1; width: 100%; height: auto; max-width: 560px; margin-inline: auto; display: block; box-shadow: 0 30px 60px -36px rgba(28, 36, 31, .45); }
 .article img.vignette-carree { object-position: center 18%; }
+
+/* Mentions légales */
+
+.legal .lecture-corps h3 { font-size: 1.15rem; margin: 1.6em 0 .5em; }
+.legal .lecture-corps a { color: var(--vert); font-weight: 600; }
+.a-completer { background: #fdf0d6; color: #8a4b00; padding: 0 .3em; border-radius: 4px; font-weight: 600; }
+.pied-bas a { margin-left: 12px; text-decoration: underline; }
+.lettre-boite p a { color: var(--jaune); }
