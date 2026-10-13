@@ -144,8 +144,10 @@
           <h2 id="titre-contact">Parlez-moi de votre livre</h2>
           <p class="chapeau">Quelques lignes suffisent. Le premier échange est sans engagement, et tout ce que vous me confiez reste confidentiel.</p>
         </div>
-        <!-- Remplacer VOTRE_ID_FORMSPREE par l’identifiant du formulaire créé sur formspree.io -->
-        <form class="formulaire" id="formulaire-contact" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+        <!-- Formulaire reçu par Netlify Forms : les demandes apparaissent dans Netlify, onglet Forms -->
+        <form class="formulaire" id="formulaire-contact" name="contact" action="/merci.html" method="POST" data-netlify="true" netlify-honeypot="adresse-web">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="visuellement-cache"><label>Ne pas remplir : <input name="adresse-web" tabindex="-1" autocomplete="off"></label></p>
           <div class="champ">
             <label for="nom">Prénom et nom</label>
             <input type="text" id="nom" name="nom" autocomplete="name" required>
@@ -171,7 +173,6 @@
             <label for="message">Votre projet en quelques lignes</label>
             <textarea id="message" name="message" required></textarea>
           </div>
-          <input type="hidden" name="_subject" value="Nouvelle demande depuis le site Prête Plume">
           <button class="bouton" type="submit">Envoyer ma demande</button>
           <p class="statut" id="statut" role="status"></p>
         </form>

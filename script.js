@@ -46,7 +46,7 @@ document.querySelectorAll('a[data-genre]').forEach(lien => {
   lien.addEventListener('click', () => choisirGenre(lien.dataset.genre));
 });
 
-// Formulaire de contact (Formspree)
+// Formulaire de contact (Netlify Forms)
 const formulaire = document.querySelector('#formulaire-contact');
 const statut = document.querySelector('#statut');
 
@@ -54,20 +54,13 @@ formulaire?.addEventListener('submit', async evenement => {
   evenement.preventDefault();
   const bouton = formulaire.querySelector('button[type="submit"]');
   statut.className = 'statut';
-
-  if (formulaire.action.includes('VOTRE_ID_FORMSPREE')) {
-    statut.classList.add('erreur');
-    statut.textContent = 'Le formulaire n’est pas encore relié à une boîte de réception.';
-    return;
-  }
-
   bouton.disabled = true;
   statut.textContent = 'Envoi en cours…';
   try {
-    const reponse = await fetch(formulaire.action, {
+    const reponse = await fetch('/', {
       method: 'POST',
-      body: new FormData(formulaire),
-      headers: { Accept: 'application/json' }
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(formulaire)).toString()
     });
     if (!reponse.ok) throw new Error(String(reponse.status));
     formulaire.reset();
